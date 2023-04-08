@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_nav_dashboard"
+        android:icon="@drawable/home_icon_menu"
+        android:title="HOME"
+        android:checked="true"
+        />
+    <item
+        android:id="@+id/bottom_nav_today_delivery"
+        android:icon="@drawable/menu_track"
+        android:title="Today's Delivery"
+        />
+    <item
+        android:id="@+id/bottom_nav_history"
+        android:icon="@drawable/menu_history"
+        android:title="History" />
+    <item
+        android:id="@+id/bottom_nav_other"
+        android:icon="@drawable/menu_setting"
+        android:title="Other" />
+</menu>
