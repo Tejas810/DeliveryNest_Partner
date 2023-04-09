@@ -6,18 +6,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.CompoundButton;
-import android.widget.Switch;
-import android.widget.Toast;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class PartnerDashboard extends AppCompatActivity {
 
@@ -64,8 +56,8 @@ String username;
                         fragmentTransaction2.replace(R.id.content, fragment2, "");
                         fragmentTransaction2.commit();
                         return true;
-                    case R.id.bottom_nav_other:
-                        PartnerOthers fragment3 = new PartnerOthers();
+                    case R.id.bottom_nav_update_status:
+                        UpdateStatus fragment3 = new UpdateStatus();
                         FragmentTransaction fragmentTransaction3 = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction3.replace(R.id.content, fragment3, "");
                         fragmentTransaction3.commit();

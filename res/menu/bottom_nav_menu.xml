@@ -17,7 +17,7 @@
         android:icon="@drawable/menu_history"
         android:title="History" />
     <item
-        android:id="@+id/bottom_nav_other"
+        android:id="@+id/bottom_nav_update_status"
         android:icon="@drawable/menu_setting"
-        android:title="Other" />
+        android:title="Update Status" />
 </menu>
