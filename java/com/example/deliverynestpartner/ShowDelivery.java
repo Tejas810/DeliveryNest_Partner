@@ -23,7 +23,9 @@ import java.util.Map;
 public class ShowDelivery extends Fragment {
     String username,fullname;
     SessionManager sessionManager;
+    String finalOid;
     private LoadingDialog aLodingDialog;
+    public static String orderidtotrack;
     FrameLayout fr;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class ShowDelivery extends Fragment {
         Bundle bundle=getArguments();
         fr=v.findViewById(R.id.Framelayout);
         ((TextView)v.findViewById(R.id.OrderId)).append(bundle.get("OrderId").toString());
+        finalOid=bundle.get("OrderId").toString();
         ((TextView)v.findViewById(R.id.Status)).append(bundle.get("Status").toString());
         ((TextView)v.findViewById(R.id.AssignedTo)).append(bundle.get("AssignedTo").toString());
         ((TextView)v.findViewById(R.id.BookOption)).append(bundle.get("BookOption").toString());
@@ -79,6 +82,7 @@ public class ShowDelivery extends Fragment {
         reference.updateChildren(map).addOnSuccessListener(new OnSuccessListener() {
             @Override
             public void onSuccess(Object o) {
+                System.out.println("in success");
                 loader();
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -90,12 +94,13 @@ public class ShowDelivery extends Fragment {
     }
     private void loader() {
         aLodingDialog.show();
-
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 aLodingDialog.cancel();
+                orderidtotrack=finalOid;
+                System.out.println("In Show Delivery");
                 AssignOrder_Success fragment1 = new AssignOrder_Success();
                 FragmentTransaction fragmentTransaction1 = getParentFragmentManager().beginTransaction();
                 fragmentTransaction1.replace(R.id.content, fragment1);

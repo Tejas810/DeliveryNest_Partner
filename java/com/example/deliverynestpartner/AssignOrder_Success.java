@@ -26,7 +26,6 @@ public class AssignOrder_Success extends Fragment {
                 TodayDelivery fragment1 = new TodayDelivery();
                 FragmentTransaction fragmentTransaction1 = getParentFragmentManager().beginTransaction();
                 fragmentTransaction1.replace(R.id.content, fragment1);
-                TodayDelivery.adapter.notifyDataSetChanged();
                 fragmentTransaction1.commit();
             }
         };

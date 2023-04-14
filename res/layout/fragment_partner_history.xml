@@ -3,12 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".PartnerHistory">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:letterSpacing="0.1"
+        android:text="Order History"
+        android:textColor="@color/secondaryappcolor"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        />
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="100dp"
+        android:dividerHeight="20dp"
+        android:divider="@color/white"
+        android:backgroundTint="@color/transparent"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/notFoundAnimation"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/notfound"/>
 
 </FrameLayout>

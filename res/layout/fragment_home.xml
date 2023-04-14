@@ -3,16 +3,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#edf3f8"
     tools:context=".HomeFragment">
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/jobStatus"
         android:layout_width="133dp"
         android:layout_height="34dp"
         android:layout_marginStart="248dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:text="Job Status "
         android:tooltipText="Change your working status"
         />
 
+    <TextView
+        android:id="@+id/WelcomeMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello "
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:scrollbarThumbHorizontal="@android:color/transparent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:elevation="100dp"
+                app:cardCornerRadius="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TodayOrders"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="22sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/secondaryappcolor"
+                    android:textStyle="bold"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:elevation="100dp"
+                app:cardCornerRadius="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/OrdersDelivered"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="22sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/secondaryappcolor"
+                    android:textStyle="bold"
+                    />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="50dp"
+                android:background="@color/white"
+                android:elevation="100dp"
+                app:cardCornerRadius="15dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MemberSince"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="22sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/secondaryappcolor"
+                    android:textStyle="bold"
+                    />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:lottie_rawRes="@raw/dashboard"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="450dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
 </FrameLayout>
